@@ -1,0 +1,26 @@
+[
+  {
+    "Firstname": "Sofia",
+    "Lastname": "Widholm",
+    "YOB": 1995,
+    "Age": 28,
+    "MemberYears": 7,
+    "Groups": [
+      "Skådisgruppen",
+      "Manusgruppen",
+      "Låtgruppen"
+    ]
+  },
+  {
+    "Firstname": "Andreas",
+    "Lastname": "Gustavsson",
+    "YOB": 2000,
+    "Age": 23,
+    "MemberYears": 4,
+    "Groups": [
+      "Dekorgruppen",
+      "Teknikgruppen",
+      "Klubbmästeriet"
+    ]
+  }
+]

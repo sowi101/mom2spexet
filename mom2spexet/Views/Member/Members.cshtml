@@ -1,0 +1,40 @@
+﻿@model List<mom2spexet.Models.MemberModel>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Just nu finns det @ViewBag.TotalMembers medlemmar registrerade.</p>
+
+@if(@Model != null) {
+            <table>
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>Födelseår</th>
+                    <th class="hidden">Ålder</th>
+                    <th class="hidden">Medlemsår</th>
+                    <th>Grupper</th>
+                </tr>
+            </thead>
+            <tbody>
+    @foreach (var member in Model)
+    {
+
+                <tr>
+                    <td>@member.Firstname @member.Lastname</td>
+                    <td>@member.YOB</td>
+                    <td class="hidden">@member.Age</td>
+                    <td class="hidden">@member.MemberYears</td>
+                    <td>
+                        <ul>
+                       @foreach (var group in member.Groups) {
+                           <li>@group</li>
+                       }
+                        </ul>
+                    </td>
+                    
+                </tr>
+     
+    }
+        </tbody>
+    </table>
+}

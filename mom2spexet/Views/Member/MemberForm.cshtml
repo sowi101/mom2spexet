@@ -1,0 +1,83 @@
+﻿@model mom2spexet.Models.MemberModel;
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" action="/lagg-till-medlem">
+    <div class="flex">
+        <p>
+            <label asp-for="Firstname"></label><br />
+            <input asp-for="Firstname" /><br />
+            <span class="error" asp-validation-for="Firstname"></span>
+        </p>
+        <p>
+            <label asp-for="Lastname"></label><br />
+            <input asp-for="Lastname" /><br />
+            <span class="error" asp-validation-for="Lastname"></span>
+        </p>
+    </div>
+    <div class="flex">
+        <p>
+            <label asp-for="YOB"></label><br />
+            <input asp-for="YOB" /><br />
+            <span class="error" asp-validation-for="YOB"></span>
+        </p>
+        <p>
+            <label asp-for="MemberYears"></label><br />
+            <select asp-for="MemberYears">
+                <option value="" selected>Välj år</option>
+                <option value="1">1 år</option>
+                <option value="2">2 år</option>
+                <option value="3">3 år</option>
+                <option value="4">4 år</option>
+                <option value="5">5 år</option>
+                <option value="6">6 år</option>
+                <option value="7">7 år</option>
+                <option value="8">8 år</option>
+                <option value="9">9 år</option>
+                <option value="10">10 år</option>
+            </select><br />
+            <span class="error" asp-validation-for="MemberYears"></span>
+        </p>
+    </div> 
+
+    <fieldset>
+        <legend>Grupper</legend>
+    <div class="checkbox">
+        <input type="checkbox" id="actorgrp" name="Groups" value="Skådisgruppen">
+        <label for="actorgrp">Skådisgruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="scriptgrp" name="Groups" value="Manusgruppen">
+            <label for="scriptgrp">Manusgruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="songgrp" name="Groups" value="Låtgruppen">
+            <label for="songgrp">Låtgruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="scenerygrp" name="Groups" value="Dekorgruppen">
+            <label for="scenerygrp">Dekorgruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="prgrp" name="Groups" value="PR-gruppen">
+            <label for="prgroup">PR-gruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="techgrp" name="Groups" value="Teknikgruppen">
+            <label for="techgrp">Teknikgruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="costumegrp" name="Groups" value="Kostymgruppen">
+            <label for="costumegrp">Kostymgruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="cateringgrp" name="Groups" value="Klubbmästeriet">
+            <label for="cateringgrp">Klubbmästeriet</label>
+    </div>
+    </fieldset>
+    <span class="error" asp-validation-for="Groups"></span>
+      
+    <p>
+        <input type="submit" value="Spara medlem">
+    </p>
+</form>

@@ -1,0 +1,25 @@
+﻿@model mom2spexet.Models.GroupModel;
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" action="/lagg-till-grupp">
+    <div class="flex">
+        <p>
+            <label asp-for="Name"></label><br />
+            <input asp-for="Name"><br />
+            <span class="error" asp-validation-for="Name"></span>
+        </p>
+        <p>
+            <label asp-for="DateAndTime"></label><br />
+            <input asp-for="DateAndTime"><br />
+            <span class="error" asp-validation-for="DateAndTime"></span>
+        </p>
+    </div>
+    <p>
+        <label asp-for="Information"></label><br />
+        <textarea asp-for="Information"></textarea><br />
+        <span class="error" asp-validation-for="Information"></span>
+    </p>
+    <p>
+        <input type="submit" value="Spara grupp">
+    </p>
+</form>

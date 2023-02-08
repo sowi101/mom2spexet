@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moment 2 - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="link-logotype">
+            <img src="~/logotype.svg" alt="Logotyp">
+        </a>
+        <partial name="_Navigation" />
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        Webbplats skapad av Sofia Widholm 2023 <br />
+        Webbutveckling med .NET<br />
+        Webbutveckling, Mittuniversitet
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
