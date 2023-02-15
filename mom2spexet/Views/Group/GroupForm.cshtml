@@ -1,19 +1,24 @@
 ﻿@model mom2spexet.Models.GroupModel;
 <h1>@ViewData["Title"]</h1>
 
+<!-- Form to add groups -->
 <form method="post" action="/lagg-till-grupp">
     <div class="flex">
+        <!-- Input field for name -->
         <p>
             <label asp-for="Name"></label><br />
             <input asp-for="Name"><br />
             <span class="error" asp-validation-for="Name"></span>
         </p>
+        <!-- Input field for date and time for next meeting -->
         <p>
-            <label asp-for="DateAndTime"></label><br />
-            <input asp-for="DateAndTime"><br />
-            <span class="error" asp-validation-for="DateAndTime"></span>
+            <label asp-for="DayAndTime"></label><br />
+            <input asp-for="DayAndTime"><br />
+            <span class="error" asp-validation-for="DayAndTime"></span>
         </p>
     </div>
+
+    <!-- Textarea field for information about the group -->
     <p>
         <label asp-for="Information"></label><br />
         <textarea asp-for="Information"></textarea><br />

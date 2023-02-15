@@ -6,7 +6,9 @@ namespace mom2spexet.Controllers
     {
         public IActionResult Index()
         {
+            // Save title to ViewData
             ViewData["Title"] = "Välkommen";
+
             return View();
         }
     }

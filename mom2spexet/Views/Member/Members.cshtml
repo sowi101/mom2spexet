@@ -2,39 +2,41 @@
 
 <h1>@ViewData["Title"]</h1>
 
+<!-- Number of current members-->
 <p>Just nu finns det @ViewBag.TotalMembers medlemmar registrerade.</p>
 
+<!-- Table for members -->
 @if(@Model != null) {
-            <table>
-            <thead>
-                <tr>
-                    <th>Namn</th>
-                    <th>Födelseår</th>
-                    <th class="hidden">Ålder</th>
-                    <th class="hidden">Medlemsår</th>
-                    <th>Grupper</th>
-                </tr>
-            </thead>
-            <tbody>
-    @foreach (var member in Model)
-    {
-
-                <tr>
-                    <td>@member.Firstname @member.Lastname</td>
-                    <td>@member.YOB</td>
-                    <td class="hidden">@member.Age</td>
-                    <td class="hidden">@member.MemberYears</td>
-                    <td>
-                        <ul>
-                       @foreach (var group in member.Groups) {
-                           <li>@group</li>
-                       }
-                        </ul>
-                    </td>
+    <table>
+        <thead>
+            <tr>
+                <th>Namn</th>
+                <th>Födelseår</th>
+                <th class="hidden">Ålder</th>
+                <th class="hidden">Medlemsår</th>
+                <th>Grupper</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- Foreach loop to print all members -->
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td>@member.Firstname @member.Lastname</td>
+                <td>@member.YOB</td>
+                <td class="hidden">@member.Age</td>
+                <td class="hidden">@member.MemberYears</td>
+                <td>
+                    <ul>
+                    <!-- Foreach loop to print all groups that the member belongs to -->
+                    @foreach (var group in member.Groups) {
+                        <li>@group</li>
+                    }
+                    </ul>
+                </td>
                     
-                </tr>
-     
-    }
+            </tr>
+        }
         </tbody>
     </table>
 }

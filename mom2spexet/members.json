@@ -1,26 +1,48 @@
 [
   {
-    "Firstname": "Sofia",
-    "Lastname": "Widholm",
-    "YOB": 1995,
-    "Age": 28,
-    "MemberYears": 7,
+    "Firstname": "Anna",
+    "Lastname": "Andersson",
+    "YOB": 1999,
+    "MemberYears": 2,
     "Groups": [
       "Skådisgruppen",
       "Manusgruppen",
       "Låtgruppen"
-    ]
+    ],
+    "Age": 24
   },
   {
-    "Firstname": "Andreas",
-    "Lastname": "Gustavsson",
+    "Firstname": "Carl",
+    "Lastname": "Carlsson",
     "YOB": 2000,
-    "Age": 23,
-    "MemberYears": 4,
+    "MemberYears": 3,
     "Groups": [
       "Dekorgruppen",
       "Teknikgruppen",
       "Klubbmästeriet"
-    ]
+    ],
+    "Age": 23
+  },
+  {
+    "Firstname": "Per",
+    "Lastname": "Persson",
+    "YOB": 2001,
+    "MemberYears": 1,
+    "Groups": [
+      "Dekorgruppen",
+      "PR-gruppen"
+    ],
+    "Age": 22
+  },
+  {
+    "Firstname": "Lars",
+    "Lastname": "Larsson",
+    "YOB": 1995,
+    "MemberYears": 5,
+    "Groups": [
+      "Manusgruppen",
+      "Klubbmästeriet"
+    ],
+    "Age": 28
   }
 ]

@@ -9,41 +9,60 @@ namespace mom2spexet.Controllers
         [Route("/lagg-till-medlem")]
         public IActionResult MemberForm()
         {
+            // Save title to ViewData
             ViewData["Title"] = "Lägg till medlem";
+
+            return View();
+        }
+
+        [HttpPost("/lagg-till-medlem")]
+        public IActionResult MemberForm(MemberModel model)
+        {
+            // If statement to check that all required field isn't empty
+            if (ModelState.IsValid)
+            {
+                // Calculate and save value to age property
+                model.Age = DateTime.Now.Year - model.YOB;
+
+                // Read data from JSON file
+                var MemberStr = System.IO.File.ReadAllText("members.json");
+                // Deserialize JSON string to objects
+                var MemberObj = JsonConvert.DeserializeObject<List<MemberModel>>(MemberStr);
+
+                // If statement to check the variable isn't empty
+                if (MemberObj != null)
+                {
+                    // Add object from form to array
+                    MemberObj.Add(model);
+
+                    // Serialize objects to JSON string and write to JSON file
+                    System.IO.File.WriteAllText("members.json", JsonConvert.SerializeObject(MemberObj, Formatting.Indented));
+
+                    // Redirection to Members View
+                    return RedirectToAction("Members", "Member");
+                }
+            }
+
             return View();
         }
 
         [Route("/medlemmar")]
         public IActionResult Members()
         {
+            // Save title to ViewData
             ViewData["Title"] = "Medlemmar";
 
-            var JsonStr = System.IO.File.ReadAllText("members.json");
-            var JsonObj = JsonConvert.DeserializeObject<List<MemberModel>>(JsonStr);
+            // Read data from JSON file
+            var MemberStr = System.IO.File.ReadAllText("members.json");
 
-            ViewBag.TotalMembers = JsonObj.Count();
-            return View(JsonObj);
-        }
+            // Deserialize JSON string to objects
+            var MemberObj = JsonConvert.DeserializeObject<List<MemberModel>>(MemberStr);
 
-        [HttpPost("/lagg-till-medlem")]
-        public IActionResult MemberForm(MemberModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                model.Age = DateTime.Now.Year-model.YOB;
+            // Save total number of members to ViewBag
+            ViewBag.TotalMembers = MemberObj.Count();
 
-                var JsonStr = System.IO.File.ReadAllText("members.json");
-                var JsonObj = JsonConvert.DeserializeObject<List<MemberModel>>(JsonStr);
-
-                if(JsonObj != null)
-                {
-                    JsonObj.Add(model);
-                    System.IO.File.WriteAllText("members.json", JsonConvert.SerializeObject(JsonObj, Formatting.Indented));
-
-                    return RedirectToAction("Members", "Member");
-                }
-            }
-            return View();
+            // Send objects to view
+            return View(MemberObj);
         }
     }
 }

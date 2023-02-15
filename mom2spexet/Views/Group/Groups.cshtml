@@ -2,15 +2,14 @@
 
 <h1>@ViewData["Title"]</h1>
 
-@if(@Model != null) {
-    @foreach (var group in Model)
-    {
-        <article>
-            <h2>@group.Name</h2>
-            <p>@group.DateAndTime</p>
-            <p>@group.Information</p>
-        </article>
-    }
+<!-- Foreach loop that print all groups -->
+@foreach (var group in Model)
+{
+    <article>
+        <h2>@group.Name</h2>
+        <p>@group.DayAndTime</p>
+        <p>@group.Information</p>
+    </article>
 }
 
 

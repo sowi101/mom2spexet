@@ -8,16 +8,19 @@
 </head>
 <body>
     <header>
+        <!-- Logotype -->
         <a asp-area="" asp-controller="Home" asp-action="Index" class="link-logotype">
             <img src="~/logotype.svg" alt="Logotyp">
         </a>
+        <!-- Partial with navigation -->
         <partial name="_Navigation" />
     </header>
     <main>
+        <!-- Rendering of views -->
         @RenderBody()
     </main>
-
     <footer>
+        <!-- Information about the website -->
         Webbplats skapad av Sofia Widholm 2023 <br />
         Webbutveckling med .NET<br />
         Webbutveckling, Mittuniversitet

@@ -2,13 +2,16 @@
 
 <h1>@ViewData["Title"]</h1>
 
+<!-- Form to add member -->
 <form method="post" action="/lagg-till-medlem">
     <div class="flex">
+        <!-- Input field for firstname -->
         <p>
             <label asp-for="Firstname"></label><br />
             <input asp-for="Firstname" /><br />
             <span class="error" asp-validation-for="Firstname"></span>
         </p>
+        <!-- Input field for lastname-->
         <p>
             <label asp-for="Lastname"></label><br />
             <input asp-for="Lastname" /><br />
@@ -16,11 +19,13 @@
         </p>
     </div>
     <div class="flex">
+        <!-- Input field for year of birth-->
         <p>
             <label asp-for="YOB"></label><br />
             <input asp-for="YOB" /><br />
             <span class="error" asp-validation-for="YOB"></span>
         </p>
+        <!-- Select box for years of membership -->
         <p>
             <label asp-for="MemberYears"></label><br />
             <select asp-for="MemberYears">
@@ -34,12 +39,13 @@
                 <option value="7">7 år</option>
                 <option value="8">8 år</option>
                 <option value="9">9 år</option>
-                <option value="10">10 år</option>
+                <option value="10">10 år eller mer</option>
             </select><br />
             <span class="error" asp-validation-for="MemberYears"></span>
         </p>
     </div> 
 
+    <!-- Fieldset with checkboxes for groups -->
     <fieldset>
         <legend>Grupper</legend>
     <div class="checkbox">
@@ -71,12 +77,25 @@
             <label for="costumegrp">Kostymgruppen</label>
     </div>
     <div class="checkbox">
+        <input type="checkbox" id="makeupgrp" name="Groups" value="Sminkgruppen">
+        <label for="makeupgrp">Sminkgruppen</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" id="orchestragrp" name="Groups" value="Bandet">
+        <label for="orchestragrp">Bandet</label>
+    </div>
+    <div class="checkbox">
         <input type="checkbox" id="cateringgrp" name="Groups" value="Klubbmästeriet">
             <label for="cateringgrp">Klubbmästeriet</label>
     </div>
+    <div class="checkbox">
+        <input type="checkbox" id="boardgrp" name="Groups" value="Styrelsen">
+        <label for="boardgrp">Styrelsen</label>
+    </div>
     </fieldset>
     <span class="error" asp-validation-for="Groups"></span>
-      
+     
+    <!-- Submit button -->
     <p>
         <input type="submit" value="Spara medlem">
     </p>

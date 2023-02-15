@@ -1,7 +1,17 @@
 [
   {
     "Name": "Klubbmästeriet",
-    "DateAndTime": "21 februari 18.00",
-    "Information": "Lite information om mötet."
+    "DayAndTime": "Tisdag 18.00",
+    "Information": "Spexare gillar att festa tillsammans och på ett år hinner vi med ca 10 sittningar/fester. Dessa skapar KM, allt från lokal, tema, dukning, mat och bar. Dessa är högt uppskattade av resten av spexet! KM står också för att det finns mat på arbetshelger och kvällsmat i aulan när vi har föreställningar. Utan denna grupp skulle resten av spexarna förbli hungriga."
+  },
+  {
+    "Name": "Kostymgruppen",
+    "DayAndTime": "Torsdag 17.30",
+    "Information": "Spexet fixar alla sina scenkläder själva! Den stora ambitionen inför alla premiärer är att sy kostymer men av tidsbrist har det ibland hänt att man även fått lära sig att använda limpistolen och sy/limma/fixa dit kostymen ”au naturell”. Man behöver inte vara utbildad sömmerska för att vara med i kostymgruppen. Är du full av goda idéer och gillar att rita kläder behövs din kunskap. Alla scenkläder ska ritas, färger skall bestämmas och material ska väljas. Givetvis är det en fördel med symaskinsvana men med god vilja och en sprättnål kommer man långt."
+  },
+  {
+    "Name": "Dekorgruppen",
+    "DayAndTime": "Tisdag och torsdag 17.30",
+    "Information": "Är du en erfaren snickare, har händighet som hobby eller bara är enormt finurlig och gillar att klura ut tekniska lösningar? Eller har du tålamodet att ligga helt stilla under en akt bara för att öppna en lucka i slutscenen? Då är dekorgruppen något för dig. All rekvisita som förekommer på scenen under en föreställning har tillverkats (i något fall införskaffats) av dekor. Det kan handla om allt från möblemang till…allt! Det hör även till dekorgruppens uppgifter att måla alla fonder och skärmar som förekommer på scenen, därför sökes även konstnärliga förmågor till dekor."
   }
 ]
