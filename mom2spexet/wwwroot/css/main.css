@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+/* Basic settings */
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: #7E112C;
@@ -11,11 +12,18 @@ body {
     min-height: 100vh;
 }
 
+/* Layout settings */
 header, main, footer {
     padding: 1em;
     box-sizing: border-box;
     background-color: white;
     margin: 0 auto; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main {
@@ -26,26 +34,7 @@ footer {
     text-align: center;
 }
 
-img {
-    width: 100%;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav a {
-    text-decoration: none;
-    color: black;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-    color: black;
-}
-
+/* Form settings */
 form {
     width: 100%;
 }
@@ -53,10 +42,6 @@ form {
 .flex {
     display: flex;
     gap: 1em;
-}
-
-.flex-item {
-    width: 50%;
 }
 
 form p {
@@ -103,6 +88,7 @@ textarea {
     border: 0.5px solid #333333;
 }
 
+/* Table settings */
 table {
     width: 100%;
     text-align: left;
@@ -129,16 +115,7 @@ tbody tr:hover {
     color: #000000;
 }
 
-
-
-
-/* Basic settings */
-
-/* Layout settings */
-
-
 /* Navigation, links and buttons */
-
 button, input[type=submit] {
     background-color: #000000;
     color: #ffffff;
@@ -157,8 +134,17 @@ label {
     font-weight: 700;
 }
 
-/* Image settings */
+header nav a {
+    text-decoration: none;
+    color: black;
+}
 
+    header nav a:hover {
+        text-decoration: underline;
+        color: black;
+    }
+
+/* Image settings */
 img {
     width: 100%;
 }
@@ -177,6 +163,10 @@ img {
 
     .flex {
         display: block;
+    }
+
+    .flex-item {
+        width: 100%;
     }
 
     .checkbox {
@@ -214,6 +204,10 @@ img {
         display: table-cell;
     }
 
+    .flex-item {
+        width: 50%;
+    }
+
     .link-logotype {
         width: 50%;
         display: inline-block;
@@ -238,5 +232,9 @@ img {
 
     .link-logotype {
         width: 30%;
+    }
+
+    .flex-item {
+        width: 50%;
     }
 }

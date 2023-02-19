@@ -18,6 +18,9 @@ namespace mom2spexet.Controllers
         [HttpPost("/lagg-till-medlem")]
         public IActionResult MemberForm(MemberModel model)
         {
+            // Save title to ViewData
+            ViewData["Title"] = "Lägg till medlem";
+
             // If statement to check that all required field isn't empty
             if (ModelState.IsValid)
             {

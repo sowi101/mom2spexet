@@ -20,6 +20,9 @@ namespace mom2spexet.Controllers
         [HttpPost("/lagg-till-grupp")]
         public IActionResult GroupForm(GroupModel model)
         {
+            // Save title to ViewData
+            ViewData["Title"] = "Lägg till grupp";
+
             // If statement to check that all required field isn't empty
             if (ModelState.IsValid)
             {

@@ -44,5 +44,18 @@
       "Klubbmästeriet"
     ],
     "Age": 28
+  },
+  {
+    "Firstname": "Sofia",
+    "Lastname": "Widholm",
+    "YOB": 1987,
+    "MemberYears": 4,
+    "Groups": [
+      "Dekorgruppen",
+      "PR-gruppen",
+      "Klubbmästeriet",
+      "Styrelsen"
+    ],
+    "Age": 36
   }
 ]
